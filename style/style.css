@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+/*font-family: 'Roboto', sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700;800&display=swap");
+/*font-family: 'Dosis', sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;600;700;900&display=swap");
+/*font-family: 'Raleway', sans-serif;*/
+:root {
+  --mainColor: #ff724c;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: rgb(49, 51, 53);
+  overflow: hidden;
+}
+h1,
+h2 {
+  font-family: "Dosis", sans-serif;
+}
+img{
+  cursor: pointer;
+}
+.bg-mainColor {
+  background-color: var(--mainColor);
+}
+.container {
+  max-width: 1140px;
+  /*--------------navbar--------------*/
+}
+.hire {
+  border: none;
+  padding: 4px 4px 5px 15px;
+  background-color: var(--mainColor);
+}
+.hire i {
+  color: #3b3b3b;
+  background-color: white;
+  transition: 0.5s;
+}
+.hire:hover {
+  background-color: var(--mainColor);
+  color: #fff;
+  cursor: pointer;
+}
+.hire:hover i {
+  transform: rotate(360deg);
+  color: white;
+  background-color: #3b3b3b;
+}
+
+.navbar .nav-link {
+  padding-block: 15px;
+  position: relative;
+}
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background-color: var(--mainColor);
+  transition: width 0.5s;
+}
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+.navbar .nav-link:hover::after {
+  width: 100%;
+  cursor: pointer;
+}
+/*loading*/
+.loading{
+  transition: .5S;
+  
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: var(--mainColor) var(--mainColor) transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+ 
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent var(--mainColor) var(--mainColor);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: var(--mainColor) var(--mainColor) transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+   /* scroll*/
+   .scroll-to-top{
+width: 40px ;
+height: 40px;
+bottom: 20px;
+right: 20px;
+cursor: pointer;
+   } 
+/*--------------header--------------*/
+.header {
+  background-image: url("../images/introbg5.png");
+  background-attachment: fixed;
+
+  background-size: cover;
+  background-position: 20px;
+  background-repeat: no-repeat;
+}
+
+.header-content p,
+.header-content h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+
+  font-weight: 500;
+  line-height: 34.5px;
+}
+.header-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+
+.header-content p{
+  width: 0;
+  white-space:nowrap;
+  overflow: hidden;
+  border-right: 1px solid #3333;
+  animation: typing 3s infinite alternate-reverse steps(27) both ,blink infinite .7s;
+}
+/*310*/
+@keyframes typing {
+  from{
+    width: 0;
+
+  }
+  to{
+    width: 325px;
+
+  }
+}
+  @keyframes blink {
+    from{
+      border-color: #333333bd;
+  
+    }
+    to{
+      border-color: #33333300;
+  
+    }
+  
+  }
+.header-content .icon {
+  color: #3b3b3b;
+  width: 1rem;
+  height: 1rem;
+  font-size: 14px;
+  margin-left: 12px;
+  transition: 0.5s;
+}
+
+.header-content .icon:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.header .icon:nth-of-type(1) {
+  color: #365999;
+  border-color: #3b5999 !important;
+}
+header .icon:nth-of-type(1):hover {
+  background-color: #365999;
+  color: white;
+}
+
+.header .icon:nth-of-type(2) {
+  color: #ea4c89;
+  border-color: #ea4c89 !important;
+}
+header .icon:nth-of-type(2):hover {
+  background-color: #ea4c89;
+  color: white;
+}
+
+.header .icon:nth-of-type(3) {
+  color: #1769ff;
+  border-color: #1769ff !important;
+}
+header .icon:nth-of-type(3):hover {
+  background-color: #1769ff;
+  color: white;
+}
+
+.header .icon:nth-of-type(4) {
+  color: #0077b5;
+  border-color: #0077b5 !important;
+}
+header .icon:nth-of-type(4):hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+.header .icon:nth-of-type(5) {
+  color: #dd4b39;
+  border-color: #dd4b39 !important;
+}
+header .icon:nth-of-type(5):hover {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/*--------------about--------------*/
+
+.bg-numbers {
+  background-color: #4e4e4e;
+}
+.bg-manColor {
+  background-color: var(--mainColor);
+}
+.text-manColor {
+  color: var(--mainColor);
+}
+.about .count span {
+  font-size: 26px;
+
+  font-weight: 700;
+
+  line-height: 39px;
+}
+.about .count h2 {
+  font-family: "Dosis", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  line-height: 19.2px;
+}
+.title span {
+  padding-top: 2rem;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: white;
+}
+
+.title h2 {
+  font-family: "Dosis", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+  color: #3b3b3b;
+  padding-left: 25px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.about p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.width-cont {
+  width: 71%;
+}
+.about a{
+  display: inline-block ;
+  
+}
+.MyPortfolio {
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0px 5px 0px 0px;
+  margin-top: 20px;
+  margin-right: 230px;
+  color: #3b3b3b;
+  border: 1px solid var(--mainColor);
+}
+.MyPortfolio i {
+  margin-right: 8px;
+  padding: 13px 22px;
+  font-size: 11px;
+  margin-left: -1px;
+  background-color: #3b3b3b;
+  color: white;
+}
+.MyPortfolio:hover i {
+  color: var(--mainColor);
+}
+.btn:hover {
+  color: #3b3b3b;
+  border: 1px solid var(--mainColor);
+
+}
+.about .container > .row {
+  width: 90%;
+  margin: auto;
+}
+/*--------------services--------------*/
+
+.border-bottom-bg-manColor {
+  border-color: var(--mainColor) !important;
+}
+.services p {
+  font-size: 14px;
+  font-weight: 400;
+  width: 98%;
+  color: rgb(129, 129, 129);
+}
+
+.services h5 {
+  color: #3b3b3b;
+}
+.services .service-item {
+  position: relative;
+}
+.services .service-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  z-index: -1;
+  height: 0;
+  transition: 0.4s;
+}
+.services .service-item:hover::after {
+  height: 100%;
+}
+/*--------------portfolio--------------*/
+
+.portfolio {
+  background-color: #f3f3f3;
+}
+.portfolio .nav-link {
+  width: 110%;
+  height: 90%;
+  font-size: 13px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: rgb(95, 95, 95);
+  border-color: rgb(95, 95, 95) !important;
+}
+.portfolio .nav-link.nav-link.active {
+  background-color: var(--mainColor);
+  color: white;
+  border: none !important ;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  bottom: 60px;
+  left: 1px;
+  right: 0;
+  transform: scaley(0);
+  transition: 0.5s 0.1s;
+}
+.project-card:hover .overlay {
+  transform: scaley(1);
+}
+.project-card:hover .overlay i {
+  transform: scale(0);
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.project-card .overlay:hover i {
+  transform: scale(1) rotate(360deg);
+}
+.overlay i:hover {
+  color: var(--mainColor) !important;
+  border: 1px solid white;
+  background: transparent;
+}
+
+.project-card .info {
+  height: 17%;
+  bottom: 40px !important;
+  transition: 0.5s;
+  opacity: 0;
+}
+.project-card:hover .info {
+  bottom: 0 !important;
+  opacity: 1;
+}
+
+/*--------------resume--------------*/
+.resume .head i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.resume .head {
+  position: relative;
+}
+.resume .head::before,
+.resume .desc:not(:last-of-type):before 
+ {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 1px;
+  height: 100%;
+  background-color: #3b3b3b;
+
+}
+.resume .desc:not(.desc.special)::after 
+ {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--mainColor);
+  background-color: white;
+}
+.resume .head:hover  i ,.resume .desc.special:hover i{
+  background-color: #F3F3F3;
+  color: var(--mainColor);
+}
+.resume .head h4 {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.resume h6{
+  font-size: 14px;
+  font-weight: 500;
+}
+.resume h6 span{
+  font-size: 14px;
+  font-weight: 400;
+line-height: 16.8px;
+
+}
+
+.resume .desc:hover::after{
+  background-color: var(--mainColor) !important;
+}
+.resume .percentageSkill{
+  width: 90%;
+}
+.resume .bar{
+height: 5px;
+background-color: #3b3b3b;
+position: relative;
+border-radius: 5px;
+}
+.resume .bar::after{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: var(--mainColor);
+  width: 80%;
+  height: 100%;
+border-top-left-radius:5px ;
+border-bottom-left-radius:5px ;
+}
+.desc[percentage="80%"] h6{
+  width: 80%;
+}
+.desc[percentage="80%"] .bar::after{
+  width: 80%;
+
+}
+.desc[percentage="70%"] h6{
+  width: 70%;
+}
+.desc[percentage="70%"] .bar::after{
+  width: 70%;
+
+}
+.desc[percentage="55%"] h6{
+  width: 55%;
+}
+.desc[percentage="55%"] .bar::after{
+  width: 55%;
+
+}
+
+/*--------------download-resume--------------*/
+
+
+.download-resume{
+  background:linear-gradient(rgba(59,59,59,.75),rgba(59,59,59,.75)) ,url('../images/brandbg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.download-resume a{
+  font-family: 'Raleway', sans-serif;
+
+font-size: 13px;
+
+font-weight: 600;
+
+line-height: 19.5px;
+}
+.download-resume a:hover{
+  background-color: var(--mainColor);
+  border-color: var(--mainColor) !important;
+
+}
+/*--------------testimonials--------------*/
+
+
+
+
+.testimonial .quote span{
+  color: #5b5b5b;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 25.5px;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+.testimonial .quote i{
+
+font-size: 20px;
+
+font-weight: 900;
+
+line-height: 16px;
+
+}
+.testimonial .quote:hover {
+  background-color: #5b5b5b;
+  color: white;
+}
+.testimonial .quote:hover span{
+  color: white;
+}
+.carousel-indicators {
+  bottom :-100px;
+
+}
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--mainColor);
+border-radius: 50%;
+margin-left: 7px;
+
+}
+.carousel-indicators [data-bs-target].active {
+  background-color: var(--mainColor);
+}
+/*--------------Contact--------------*/
+
+.contact{
+  background:linear-gradient(rgba(255, 114, 76,.75),rgba(255, 114, 76,.75) ),url('../images/contactbg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.w-65{
+  width: 65%;
+}
+.contact input:focus , .contact textarea:focus{
+border: 1px solid white !important;
+box-shadow: none;
+}
+.contact input::placeholder , .contact textarea::placeholder{
+  color: white;
+  }
+  .MyContact{
+    padding: 0 10px 0 0px;
+margin-left: 265px;
+    border: none;
+   }
+   .contact button{
+    display: inline-block ;
+    
+  }
+   /*--------------map--------------*/
+   .map{
+    background-color: #E8EAED;
+   }
+   .contact-info .container {
+       background-color:#282828 ;
+   }
+  .map  .contact-info i{
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    background-color: white;
+    color:var(--mainColor);
+    border-radius: 50%;
+    transition: 0.4s transform , .4s color;
+
+
+  }
+  .map  .contact-info i:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+    color: white;
+    background-color: var(--mainColor);
+    border-color: var(--mainColor) ;
+  }
+  
+  /*------------footer---------*/
+  footer{
+    background-color: #F3F3F3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  footer p{
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 16px;
+    color: #818181;
+  }
+  

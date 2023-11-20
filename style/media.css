@@ -1,0 +1,223 @@
+@media (min-width: 933px) and (max-width: 1530px) {
+  .header {
+    background-position-x: -100px;
+  }
+  .header .header-content {
+    text-align: end;
+  }
+  .header h1 {
+    font-size: 50px;
+  }
+  .header p {
+    font-size: 30px;
+  }
+
+  .MyPortfolio {
+    font-size: 12px;
+    padding: 0px 5px 0px 0px;
+  }
+  .about a {
+    width: 145px;
+  }
+
+  .MyPortfolio i {
+    padding: 13px 20px;
+  }
+}
+
+@media (min-width: 758px) and (max-width: 988px) {
+  .nav-item {
+    width: fit-content;
+  }
+  .navbar-brand {
+    margin-left: 10px;
+  }
+
+  .header {
+    background-position-x: -500px;
+  }
+  .header .header-content {
+    text-align: end;
+  }
+  .header h1 {
+    font-size: 45px;
+  }
+  .header p {
+    font-size: 25px;
+  }
+
+  .MyPortfolio {
+    font-size: 12px;
+    padding: 0px 5px 0px 0px;
+  }
+  .about a {
+    width: 145px;
+  }
+
+  .MyPortfolio i {
+    padding: 13px 20px;
+  }
+  .download-resume {
+    background: linear-gradient(rgba(59, 59, 59, 0.75), rgba(59, 59, 59, 0.75)),
+      url(../images/brandbg.png);
+    background-position-x: -500px;
+    background-size: cover;
+  }
+
+  .MyContact {
+    margin-left: 200px;
+  }
+  .contact span {
+    width: 80px;
+  }
+  .map .loc {
+    margin-left: 12%;
+  }
+}
+
+@media (min-width: 479px) and (max-width: 767px) {
+  .nav-item {
+    width: fit-content;
+  }
+  .navbar-brand {
+    margin-left: 10px;
+  }
+
+  .header {
+    background-position-x: -350px;
+  }
+  .header .header-content {
+    text-align: end;
+  }
+  .header h1 {
+    font-size: 38px;
+  }
+  .header p {
+    font-size: 20px;
+  }
+  .header h3 {
+    font-size: 20px;
+  }
+
+  .about .count {
+    border: none !important;
+  }
+
+  .MyPortfolio {
+    font-size: 12px;
+    padding: 0px 5px 0px 0px;
+  }
+  .about a {
+    width: 145px;
+  }
+
+  .MyPortfolio i {
+    padding: 13px 20px;
+  }
+  .download-resume {
+    background: linear-gradient(rgba(59, 59, 59, 0.75), rgba(59, 59, 59, 0.75)),
+      url(../images/brandbg.png);
+    background-position-x: -500px;
+    background-size: cover;
+  }
+  .download-resume .brands {
+    justify-content: center !important;
+    margin-top: 2rem;
+  }
+
+  .MyContact {
+    margin-left: 200px;
+  }
+  .contact span {
+    width: 80px;
+  }
+  .contact p,
+  .contact form {
+    width: 90% !important;
+  }
+
+  .map .loc {
+    margin-left: 115px;
+  }
+  .map .phone {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 479px) {
+  .nav-item {
+    width: fit-content;
+  }
+  .navbar-brand {
+    margin-left: 10px;
+  }
+
+  .header {
+    background-position-x: -450px;
+  }
+  .header .header-content {
+    text-align: end;
+  }
+  .header h1 {
+    font-size: 28px;
+  }
+  .header p , .header h3 {
+    font-size: 15px;
+  }
+
+  .about .count {
+    border: none !important;
+  }
+
+  .MyPortfolio {
+    font-size: 12px;
+    padding: 0px 5px 0px 0px;
+  }
+  .about a {
+    width: 145px;
+  }
+
+  .MyPortfolio i {
+    padding: 13px 20px;
+  }
+  .download-resume {
+    background: linear-gradient(rgba(59, 59, 59, 0.75), rgba(59, 59, 59, 0.75)),
+      url(../images/brandbg.png);
+    background-position-x: -800px;
+    background-size: cover;
+  }
+
+  .download-resume img {
+    margin-right: 30px;
+    margin-top: 20px;
+    width: 30%;
+  }
+  .MyContact {
+    margin-left: 200px;
+  }
+  .contact span {
+    width: 80px;
+  }
+  .contact p,
+  .contact form {
+    width: 100% !important;
+  }
+  .map .loc {
+    margin-left: 28%;
+  }
+}
+@media (max-width: 325px) {
+  .header {
+    background-position-x: -300px;
+  }
+  .header .header-content {
+    text-align: end;
+  }
+  .header h1 {
+    font-size: 28px;
+  }
+  .header p , .header h3 {
+    font-size: 15px;
+  }
+
+}
